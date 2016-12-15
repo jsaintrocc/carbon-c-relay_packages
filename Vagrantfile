@@ -81,6 +81,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :ubuntu do |ubuntu|
       # Every Vagrant virtual environment requires a box to build off of.
       ubuntu.vm.box = "ubuntu/trusty64"
+      #ubuntu.vm.box = "ubuntu/precise64"
 
       # Create a forwarded port mapping which allows access to a specific port
       # within the machine from a port on the host machine. In the example below,
