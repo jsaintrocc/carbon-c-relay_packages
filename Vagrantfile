@@ -20,6 +20,7 @@ apt-get install -y build-essential devscripts fakeroot dh-make automake git vim 
 cd /home/vagrant/sync
 export DEBEMAIL="$1"
 export DEBFULLNAME="$2"
+make newrelease
 make debuild
 cd /home/vagrant && dpkg -i carbon-c-relay*.deb
 cp carbon-c-relay*.deb /build
