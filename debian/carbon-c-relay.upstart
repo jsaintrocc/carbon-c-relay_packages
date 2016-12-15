@@ -9,9 +9,6 @@ stop on runlevel [016] or deconfiguring-networking or unmounting-filesystem
 respawn
 respawn limit 10 5
 
-# Daemon cannot reload
-reload signal 0
-
 env DAEMON=/usr/sbin/carbon-c-relay
 env CONFIG=/etc/carbon/carbon-c-relay.conf
 env PARAMETERS=/etc/default/carbon-c-relay
