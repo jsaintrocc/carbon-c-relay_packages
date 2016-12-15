@@ -25,6 +25,6 @@ end script
 
 script
         . $PARAMETERS
-	exec $DAEMON $OPTS
+	$DAEMON $OPTS
 end script
 
