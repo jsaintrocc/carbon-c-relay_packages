@@ -25,6 +25,10 @@ case "$1" in
           --home /tmp --no-create-home\
           --gecos "Graphite carbon-c-relay Daemon" --group carbon
       fi
+      mkdir -p /var/log/carbon-c-relay
+      chown carbon:carbon /var/log/carbon-c-relay
+      mkdir -p /var/run/carbon-c-relay
+      chown carbon:carbon /var/run/carbon-c-relay
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

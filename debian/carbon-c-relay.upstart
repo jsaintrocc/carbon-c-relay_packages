@@ -14,6 +14,7 @@ env CONFIG=/etc/carbon/carbon-c-relay.conf
 env PARAMETERS=/etc/default/carbon-c-relay
 
 setuid carbon
+expect fork
 
 pre-start script
     [ -x $DAEMON ] || { stop; exit 0; }

@@ -5,10 +5,13 @@
 DISABLE=0
 
 # Pid file for this process
-PIDFILE=/var/run/carbon-c-relay.pid
+PIDFILE=/var/run/carbon-c-relay/carbon-c-relay.pid
 
 # Configuration file
 CONFIG=/etc/carbon/carbon-c-relay.conf
+
+# Log File
+LOGFILE=/var/log/carbon-c-relay/carbon-c-relay.log
 
 # Additional options that are passed to the Daemon.
 # -v print version and exit
@@ -24,4 +27,4 @@ CONFIG=/etc/carbon/carbon-c-relay.conf
 # -H hostname: override hostname (used in statistics)
 #
 # Note: The hostname is set dynamically in the init script.
-OPTS="-f $CONFIG"
+OPTS="-P $PIDFILE -l $LOGFILE -f $CONFIG"
